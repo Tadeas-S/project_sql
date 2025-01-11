@@ -30,5 +30,5 @@ FROM price_pyaroll_ratio AS actual
 LEFT JOIN price_pyaroll_ratio AS previous
     ON actual.year = previous.year + 1
 WHERE actual."year" != 2006
-ORDER BY price_change_percent ASC
+ORDER BY price_change_percent DESC
 LIMIT 1;
